@@ -1,36 +1,34 @@
 package aula30.SistemadeBiblioteca;
 
+/**
+ * Classe que representa uma revista na biblioteca.
+ * Uma revista pode ser emprestada, devolvida e reservada.
+ */
 public class Exercicio2Revista extends Exercicio2Publicacao implements Exercicio2Reservavel {
 
-    private boolean emprestada;
-
+    /**
+     * Construtor para a classe Revista.
+     *
+     * @param titulo o título da revista
+     * @param autor o autor da revista
+     * @param anoPublicacao o ano de publicação da revista
+     */
     public Exercicio2Revista(String titulo, String autor, int anoPublicacao) {
         super(titulo, autor, anoPublicacao);
-        this.emprestada = false;
     }
 
     @Override
     public void emprestar() {
-        if (emprestada) {
-            System.out.println("A revista já está emprestada.");
-        } else {
-            emprestada = true;
-            System.out.println("Revista emprestada: " + titulo);
-        }
+        // Implementação do método de emprestar para revista
     }
 
     @Override
     public void devolver() {
-        if (!emprestada) {
-            System.out.println("A revista não está emprestada.");
-        } else {
-            emprestada = false;
-            System.out.println("Revista devolvida: " + titulo);
-        }
+        // Implementação do método de devolver para revista
     }
 
     @Override
     public void reservar() {
-        System.out.println("Revista reservada: " + titulo);
+        // Implementação do método de reservar para revista
     }
 }

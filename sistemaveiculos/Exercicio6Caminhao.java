@@ -1,28 +1,39 @@
-package aula30.sistemaveiculos;
+package sistemaVeiculos;
 
-public class Exercicio6Caminhao extends Exercicio6Veiculo implements Exercicio6Manutencao {
+/**
+ * Classe que representa um caminhão.
+ * Implementa os métodos abstratos da classe Veiculo e a interface Manutencao.
+ */
+public class Caminhao extends Veiculo implements Manutencao {
 
-    public Exercicio6Caminhao(String marca, String modelo, int ano) {
+    /**
+     * Construtor para a classe Caminhao.
+     *
+     * @param marca  a marca do caminhão
+     * @param modelo o modelo do caminhão
+     * @param ano    o ano do caminhão
+     */
+    public Caminhao(String marca, String modelo, int ano) {
         super(marca, modelo, ano);
     }
 
     @Override
     public void ligar() {
-        System.out.println("O caminhão " + marca + " " + modelo + " está ligado.");
+        System.out.println("O caminhão " + marca + " " + modelo + " de " + ano + " está ligado.");
     }
 
     @Override
     public void desligar() {
-        System.out.println("O caminhão " + marca + " " + modelo + " está desligado.");
+        System.out.println("O caminhão " + marca + " " + modelo + " de " + ano + " está desligado.");
     }
 
     @Override
     public void acelerar() {
-        System.out.println("O caminhão " + marca + " " + modelo + " está acelerando.");
+        System.out.println("O caminhão " + marca + " " + modelo + " de " + ano + " está acelerando.");
     }
 
     @Override
     public void realizarManutencao() {
-        System.out.println("Realizando manutenção no caminhão " + marca + " " + modelo + ".");
+        System.out.println("Manutenção realizada no caminhão " + marca + " " + modelo + " de " + ano + ".");
     }
 }

@@ -1,6 +1,14 @@
-package aula30.sistemazoologico;
+package aula30.sistemadezoologico;
 
-public interface Exercicio5Cuidador {
+/**
+ * Interface que define o comportamento de um Cuidador.
+ */
+public interface Cuidador {
 
-    void cuidar();
+    /**
+     * Método que define as ações de cuidado específicas para cada tipo de animal.
+     *
+     * @param animal o animal que será cuidado
+     */
+    void cuidar(aula30.sistemadezoologico.Animal animal);
 }

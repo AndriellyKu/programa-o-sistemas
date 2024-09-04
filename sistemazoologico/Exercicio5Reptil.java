@@ -1,23 +1,29 @@
-package aula30.sistemazoologico;
+package aula30.sistemadezoologico;
 
-public class Exercicio5Reptil extends Exercicio5Animal implements Exercicio5Cuidador {
+/**
+ * Classe que representa um Réptil.
+ * Implementa os métodos de emissão de som e alimentação para répteis.
+ */
+public class Reptil extends Animal {
 
-    public Exercicio5Reptil(String nome, int idade, String especie) {
+    /**
+     * Construtor da classe Reptil.
+     *
+     * @param nome     o nome do réptil
+     * @param idade    a idade do réptil
+     * @param especie  a espécie do réptil
+     */
+    public Reptil(String nome, int idade, String especie) {
         super(nome, idade, especie);
     }
 
     @Override
     public void emitirSom() {
-        System.out.println(nome + " está emitindo sons baixos ou sibilantes característicos de répteis.");
+        System.out.println(nome + " está emitindo um som de réptil.");
     }
 
     @Override
     public void alimentar() {
-        System.out.println(nome + " está sendo alimentado com insetos, pequenos animais ou vegetais.");
-    }
-
-    @Override
-    public void cuidar() {
-        System.out.println("Cuidando de " + nome + " com atividades específicas para répteis.");
+        System.out.println(nome + " está sendo alimentado com insetos.");
     }
 }

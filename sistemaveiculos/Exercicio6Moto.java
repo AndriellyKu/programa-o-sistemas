@@ -1,28 +1,34 @@
-package aula30.sistemaveiculos;
+package sistemaVeiculos;
 
-public class Exercicio6Moto extends Exercicio6Veiculo implements Exercicio6Manutencao {
+/**
+ * Classe que representa uma moto.
+ * Implementa os métodos abstratos da classe Veiculo.
+ */
+public class Exercicio6Moto extends sistemaVeiculos.Veiculo {
 
+    /**
+     * Construtor para a classe Moto.
+     *
+     * @param marca  a marca da moto
+     * @param modelo o modelo da moto
+     * @param ano    o ano da moto
+     */
     public Exercicio6Moto(String marca, String modelo, int ano) {
         super(marca, modelo, ano);
     }
 
     @Override
     public void ligar() {
-        System.out.println("A moto " + marca + " " + modelo + " está ligada.");
+        System.out.println("A moto " + marca + " " + modelo + " de " + ano + " está ligada.");
     }
 
     @Override
     public void desligar() {
-        System.out.println("A moto " + marca + " " + modelo + " está desligada.");
+        System.out.println("A moto " + marca + " " + modelo + " de " + ano + " está desligada.");
     }
 
     @Override
     public void acelerar() {
-        System.out.println("A moto " + marca + " " + modelo + " está acelerando.");
-    }
-
-    @Override
-    public void realizarManutencao() {
-        System.out.println("Realizando manutenção na moto " + marca + " " + modelo + ".");
+        System.out.println("A moto " + marca + " " + modelo + " de " + ano + " está acelerando.");
     }
 }

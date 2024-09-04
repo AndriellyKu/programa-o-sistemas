@@ -1,36 +1,34 @@
 package aula30.SistemadeBiblioteca;
 
+/**
+ * Classe que representa um jornal na biblioteca.
+ * Um jornal pode ser emprestado, devolvido e reservado.
+ */
 public class Exercicio2Jornal extends Exercicio2Publicacao implements Exercicio2Reservavel {
 
-    private boolean emprestado;
-
+    /**
+     * Construtor para a classe Jornal.
+     *
+     * @param titulo o título do jornal
+     * @param autor o autor do jornal
+     * @param anoPublicacao o ano de publicação do jornal
+     */
     public Exercicio2Jornal(String titulo, String autor, int anoPublicacao) {
         super(titulo, autor, anoPublicacao);
-        this.emprestado = false;
     }
 
     @Override
     public void emprestar() {
-        if (emprestado) {
-            System.out.println("O jornal já está emprestado.");
-        } else {
-            emprestado = true;
-            System.out.println("Jornal emprestado: " + titulo);
-        }
+        // Implementação do método de emprestar para jornal
     }
 
     @Override
     public void devolver() {
-        if (!emprestado) {
-            System.out.println("O jornal não está emprestado.");
-        } else {
-            emprestado = false;
-            System.out.println("Jornal devolvido: " + titulo);
-        }
+        // Implementação do método de devolver para jornal
     }
 
     @Override
     public void reservar() {
-        System.out.println("Jornal reservado: " + titulo);
+        // Implementação do método de reservar para jornal
     }
 }

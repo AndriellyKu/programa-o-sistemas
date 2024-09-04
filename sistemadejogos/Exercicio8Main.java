@@ -1,5 +1,8 @@
 package aula30.sistemadejogos;
 
+/**
+ * Classe principal para testar o sistema de gerenciamento de jogos.
+ */
 public class Exercicio8Main {
 
     public static void main(String[] args) {

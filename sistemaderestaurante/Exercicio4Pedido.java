@@ -1,27 +1,38 @@
 package aula30.sistemaderestaurante;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Exercicio4Pedido {
+/**
+ * Classe abstrata que representa um pedido genérico em um restaurante.
+ * Subclasses devem implementar os métodos abstratos de acordo com o tipo específico de pedido.
+ */
+public abstract class Pedido {
 
-    protected int numeroDoPedido;
+    protected int numeroPedido;
     protected List<String> itens;
     protected String status;
 
-    public Exercicio4Pedido(int numeroDoPedido) {
-        this.numeroDoPedido = numeroDoPedido;
-        this.itens = new ArrayList<>();
-        this.status = "Aberto";
+    /**
+     * Construtor para a classe Pedido.
+     *
+     * @param numeroPedido O número identificador do pedido.
+     * @param itens        A lista de itens do pedido.
+     * @param status       O status atual do pedido.
+     */
+    public Pedido(int numeroPedido, List<String> itens, String status) {
+        this.numeroPedido = numeroPedido;
+        this.itens = itens;
+        this.status = status;
     }
 
+    /**
+     * Calcula o total do pedido.
+     * Método abstrato que deve ser implementado por subclasses.
+     *
+     * @return O valor total do pedido.
+     */
     public abstract double calcularTotal();
 
-    public abstract void adicionarItem(String item);
+/**
+ * Adiciona um item ao pedido.
 
-    public abstract void removerItem(String item);
-
-    public void mudarStatus(String novoStatus) {
-        this.status = novoStatus;
-    }
-}

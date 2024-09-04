@@ -1,7 +1,17 @@
 package aula30.sistemadecombustivel;
 
+/**
+ * Classe que representa uma Bicicleta.
+ * Implementa os métodos de mover e parar para o comportamento específico de uma bicicleta.
+ */
 public class Exercicio3Bicicleta extends Exercicio3Transporte {
 
+    /**
+     * Construtor da classe Bicicleta.
+     *
+     * @param capacidade       a capacidade da bicicleta
+     * @param velocidadeMaxima a velocidade máxima da bicicleta
+     */
     public Exercicio3Bicicleta(int capacidade, double velocidadeMaxima) {
         super(capacidade, velocidadeMaxima);
     }
@@ -13,6 +23,6 @@ public class Exercicio3Bicicleta extends Exercicio3Transporte {
 
     @Override
     public void parar() {
-        System.out.println("A bicicleta parou.");
+        System.out.println("A bicicleta está parando.");
     }
 }

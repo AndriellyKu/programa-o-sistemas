@@ -1,24 +1,33 @@
-package aula30.sistemaveiculos;
+package sistemaVeiculos;
 
-public class Exercicio6Main {
-
+/**
+ * Classe principal para testar o sistema de veículos.
+ * Cria instâncias de diferentes tipos de veículos e realiza operações de ligar, desligar, acelerar e manutenção.
+ */
+public class Main {
     public static void main(String[] args) {
-        Exercicio6Carro carro = new Exercicio6Carro("Toyota", "Corolla", 2020);
+        // Criando instâncias de veículos
+        Veiculo carro = new Carro("Ford", "Mustang", 2024);
+        Veiculo moto = new Moto("Honda", "CB500", 2022);
+        Veiculo caminhao = new Caminhao("Scania", "R450", 2023);
+
+        // Testando operações de ligar, desligar e acelerar
+        System.out.println("Carro:");
         carro.ligar();
         carro.acelerar();
         carro.desligar();
-        carro.realizarManutencao();
+        ((Carro) carro).realizarManutencao();
 
-        Exercicio6Moto moto = new Exercicio6Moto("Honda", "CB500", 2018);
+        System.out.println("\nMoto:");
         moto.ligar();
         moto.acelerar();
         moto.desligar();
-        moto.realizarManutencao();
+        // Moto não implementa a interface Manutencao
 
-        Exercicio6Caminhao caminhao = new Exercicio6Caminhao("Volvo", "FH", 2015);
+        System.out.println("\nCaminhão:");
         caminhao.ligar();
         caminhao.acelerar();
         caminhao.desligar();
-        caminhao.realizarManutencao();
+        ((Caminhao) caminhao).realizarManutencao();
     }
 }

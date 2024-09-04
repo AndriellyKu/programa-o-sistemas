@@ -1,23 +1,29 @@
-package aula30.sistemazoologico;
+package aula30.sistemadezoologico;
 
-public class Exercicio5Mamifero extends Exercicio5Animal implements Exercicio5Cuidador {
+/**
+ * Classe que representa um Mamífero.
+ * Implementa os métodos de emissão de som e alimentação para mamíferos.
+ */
+public class Mamifero extends Animal {
 
-    public Exercicio5Mamifero(String nome, int idade, String especie) {
+    /**
+     * Construtor da classe Mamifero.
+     *
+     * @param nome     o nome do mamífero
+     * @param idade    a idade do mamífero
+     * @param especie  a espécie do mamífero
+     */
+    public Mamifero(String nome, int idade, String especie) {
         super(nome, idade, especie);
     }
 
     @Override
     public void emitirSom() {
-        System.out.println(nome + " está emitindo um som típico de mamífero.");
+        System.out.println(nome + " está emitindo um som de mamífero.");
     }
 
     @Override
     public void alimentar() {
-        System.out.println(nome + " está sendo alimentado com comida adequada para mamíferos.");
-    }
-
-    @Override
-    public void cuidar() {
-        System.out.println("Cuidando de " + nome + " com atividades específicas para mamíferos.");
+        System.out.println(nome + " está sendo alimentado com leite.");
     }
 }

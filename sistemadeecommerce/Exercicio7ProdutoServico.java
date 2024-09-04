@@ -1,29 +1,35 @@
-package aula30.sistemadeecommerce;
+package aula30.SistemadeEcommerce;
 
+/**
+ * Classe que representa um serviço no sistema de e-commerce.
+ * Um serviço pode ter um preço ajustado com base na duração ou complexidade.
+ */
 public class Exercicio7ProdutoServico extends Exercicio7Produto implements Exercicio7Promocao {
 
-    private double horasDeServico;
-    private double taxaPorHora;
-
-    public Exercicio7ProdutoServico(String nome, double preco, String categoria, double horasDeServico, double taxaPorHora) {
+    /**
+     * Construtor para a classe ProdutoServico.
+     *
+     * @param nome      o nome do serviço
+     * @param preco     o preço do serviço
+     * @param categoria a categoria do serviço
+     */
+    public Exercicio7ProdutoServico(String nome, double preco, String categoria) {
         super(nome, preco, categoria);
-        this.horasDeServico = horasDeServico;
-        this.taxaPorHora = taxaPorHora;
     }
 
     @Override
     public double calcularPrecoFinal() {
-        return preco + (horasDeServico * taxaPorHora);
+        // Implementação do cálculo do preço final para serviço
+        return preco;
     }
 
     @Override
     public void exibirDetalhes() {
-        System.out.println("Serviço: " + nome + ", Categoria: " + categoria + ", Preço: " + preco + ", Horas de Serviço: " + horasDeServico + ", Preço Final: " + calcularPrecoFinal());
+        // Implementação da exibição de detalhes do serviço
     }
 
     @Override
     public void aplicarPromocao() {
-        System.out.println("Aplicando promoção ao serviço " + nome);
-        preco *= 0.95;
+        // Implementação da aplicação de promoção para serviço
     }
 }
